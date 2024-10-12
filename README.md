@@ -19,7 +19,7 @@ promoting efficiency and transparency across departments.
 ## Features
 
 - **Department Management:** Supports multiple departments, each with a manager and employees.
-- **Employee Roles:** All company members are employees, with different roles including Fresh, Mid-l**evel, Senior, Team
+- **Employee Roles:** All company members are employees, with different roles including Fresh, Mid-level, Senior, Team
   Leads, and Managers.
 - **Training Management:** Employees can enroll in training sessions outside of working hours.
 - **Task and Sprint Management:** Product Owners (POs) can create tasks and manage sprints, while Team Leads assign
