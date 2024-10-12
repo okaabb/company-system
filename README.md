@@ -57,6 +57,8 @@ promoting efficiency and transparency across departments.
 3. Configure your database connection in `src/main/resources/application.properties`
 4. Run the application:
    ```mvn spring-boot:run```
+5. The database schema and tables will be automatically created using Liquibase migration scripts upon running the backend application.
+
 
 **Frontend Setup**
 
