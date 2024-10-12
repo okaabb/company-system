@@ -1,7 +1,6 @@
-import {Component, inject} from '@angular/core';
+import {Component, inject, ViewChild} from '@angular/core';
 import {ErrorService} from "./services/error.service";
-import {from} from "rxjs";
-import {AuthService} from "./services/auth.service";
+import {NavbarComponent} from "./navbar/navbar.component";
 import {Router} from "@angular/router";
 
 @Component({
@@ -10,18 +9,17 @@ import {Router} from "@angular/router";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ole-hr-system';
+  title = 'Company System';
   error$ = this.errorService.error$;
+  @ViewChild(NavbarComponent) navbar!: NavbarComponent;
 
-  constructor(private errorService: ErrorService, private authService: AuthService, private router: Router) {
+  constructor(private router: Router, private errorService: ErrorService) {
   }
 
-  logout() {
-    this.authService.logout();
-    this.router.navigate(['/login']);
+  listApplicants() {
+    this.router.navigate(['/applicants']);
   }
-
-  isAuthenticated() {
-    return this.authService.isLoggedIn();
+  listEmployees() {
+    this.router.navigate(['/employees']);
   }
 }

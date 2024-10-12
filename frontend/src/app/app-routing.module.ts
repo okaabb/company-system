@@ -20,10 +20,10 @@ const routes: Routes = [
   {path: 'applicants/remove/:id', component: ApplicantRemoveComponent},
   {path: 'applicants/edit/:id', component: ApplicantEditComponent},
   {path: 'applicants/:id', component: ApplicantDetailsComponent},
-  {path: 'list', component: EmployeeListComponent},
-  {path: 'add', component: EmployeeAddComponent},
-  {path: 'edit/:id', component: EmployeeEditComponent},
-  {path: 'details/:id', component: EmployeeDetailsComponent},
+  {path: 'employees', component: EmployeeListComponent},
+  {path: 'employees/add', component: EmployeeAddComponent},
+  {path: 'employees/edit/:id', component: EmployeeEditComponent},
+  {path: 'employees/:id', component: EmployeeDetailsComponent},
   {path: '', redirectTo: '/login', pathMatch: 'full'},
   {path: '**', redirectTo: '/login'}
 ];

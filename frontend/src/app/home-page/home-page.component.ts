@@ -12,9 +12,4 @@ export class HomePageComponent {
   constructor(private router: Router, private authService: AuthService) {
   }
 
-  listApplicants() {
-    this.router.navigate(['/applicants']);
-  }
-
-
 }

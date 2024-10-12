@@ -27,6 +27,9 @@ import {MatSelectModule} from "@angular/material/select";
 import {MatInputModule} from "@angular/material/input";
 import {HttpTokenInterceptor} from "./interceptor/http-token.interceptor";
 import { LogoutComponent } from './logout/logout.component';
+import {MatToolbarModule} from "@angular/material/toolbar";
+import { NavbarComponent } from './navbar/navbar.component';
+import {MatSidenavModule} from "@angular/material/sidenav";
 
 @NgModule({
   declarations: [
@@ -42,7 +45,8 @@ import { LogoutComponent } from './logout/logout.component';
     ApplicantDetailsComponent,
     ApplicantEditComponent,
     ApplicantRemoveComponent,
-    LogoutComponent
+    LogoutComponent,
+    NavbarComponent
   ],
   imports: [
     MatTableModule,
@@ -58,7 +62,9 @@ import { LogoutComponent } from './logout/logout.component';
     ModalComponent,
     ErrorModalComponent,
     MatSelectModule,
-    MatInputModule
+    MatInputModule,
+    MatToolbarModule,
+    MatSidenavModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: HttpTokenInterceptor, multi: true }
