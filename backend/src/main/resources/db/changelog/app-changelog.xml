@@ -2,8 +2,7 @@
                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
 
-    <include file="classpath:db/changelog/scripts/create_tables.xml"/>
-    <include file="db/changelog/scripts/add_delete_boolean_columns.xml"/>
-    <include file="db/changelog/scripts/change_enums_to_varchar.xml"/>
+    <include file="db/changelog/scripts/create_tables.xml"/>
+    <include file="db/changelog/scripts/create-admin.xml"/>
 
 </databaseChangeLog>
