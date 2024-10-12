@@ -1,0 +1,23 @@
+<app-error-modal *ngIf="(error$ | async) as errorMessage" title="An error occurred!"
+                 [message]="errorMessage"></app-error-modal>
+
+<div class="app-container">
+  <header>
+    <h1>Welcome to the HR System</h1>
+  </header>
+  <button mat-button (click)="logout()" *ngIf="isAuthenticated()">Log out</button>
+
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 HR System. All rights reserved.</p>
+  </footer>
+</div>
+
+
+
+
+
+

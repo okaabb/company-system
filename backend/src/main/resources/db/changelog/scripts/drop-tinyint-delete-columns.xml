@@ -1,0 +1,46 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="5" author="user">
+        <dropColumn tableName="applicant">
+            <column name="is_deleted"/>
+        </dropColumn>
+        <dropColumn tableName="department">
+            <column name="is_deleted"/>
+        </dropColumn>
+        <dropColumn tableName="application">
+            <column name="is_deleted"/>
+        </dropColumn>
+        <dropColumn tableName="duty">
+            <column name="is_deleted"/>
+        </dropColumn>
+        <dropColumn tableName="employee">
+            <column name="is_deleted"/>
+        </dropColumn>
+        <dropColumn tableName="employee_training">
+            <column name="is_deleted"/>
+        </dropColumn>
+        <dropColumn tableName="hiring_phase">
+            <column name="is_deleted"/>
+        </dropColumn>
+        <dropColumn tableName="phase_interviewer">
+            <column name="is_deleted"/>
+        </dropColumn>
+        <dropColumn tableName="sprint">
+            <column name="is_deleted"/>
+        </dropColumn>
+        <dropColumn tableName="task">
+            <column name="is_deleted"/>
+        </dropColumn>
+        <dropColumn tableName="team">
+            <column name="is_deleted"/>
+        </dropColumn>
+        <dropColumn tableName="team_member">
+            <column name="is_deleted"/>
+        </dropColumn>
+        <dropColumn tableName="training">
+            <column name="is_deleted"/>
+        </dropColumn>
+    </changeSet>
+</databaseChangeLog>
