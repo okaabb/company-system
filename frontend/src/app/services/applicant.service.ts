@@ -9,7 +9,7 @@ import {ErrorService} from "./error.service";
   providedIn: 'root'
 })
 export class ApplicantService {
-  private baseUrl = 'http://localhost:8080/applicants';
+  private baseUrl = '/api/applicants';
 
   constructor(private httpClient: HttpClient, private errorService: ErrorService) {
   }

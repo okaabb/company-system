@@ -9,7 +9,7 @@ import {ErrorService} from "./error.service";
 })
 export class AuthService {
   private isAuthenticated = false;
-  private loginUrl = 'http://localhost:8080/login';
+  private loginUrl = '/api/login';
   private loginRequest: LoginRequest = {username: '', password: ''};
 
   constructor(private httpClient: HttpClient, private errorService: ErrorService) {

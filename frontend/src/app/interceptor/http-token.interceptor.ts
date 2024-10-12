@@ -10,9 +10,9 @@ export class HttpTokenInterceptor implements HttpInterceptor {
   constructor(private authService: AuthService, private router: Router) {
   }
 
-  intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
+  intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     console.log(this.authService.isLoggedIn())
-    if (request.url.includes("http://localhost:8080/login")) {
+    if (request.url.includes("/login")) {
       if (this.authService.isLoggedIn()) {
         this.router.navigate(['/home']);
         return new Observable<HttpEvent<unknown>>();
@@ -29,6 +29,6 @@ export class HttpTokenInterceptor implements HttpInterceptor {
       return next.handle(authReq);
     }
     this.router.navigate(['/home']);
-    return new Observable<HttpEvent<unknown>>();
+    return new Observable<HttpEvent<any>>();
   }
 }
