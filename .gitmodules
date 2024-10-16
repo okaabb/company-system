@@ -1,0 +1,6 @@
+[submodule "company-system-frontend"]
+	path = company-system-frontend
+	url = git@github.com:okaabb/company-system-frontend.git
+[submodule "company-system-backend"]
+	path = company-system-backend
+	url = git@github.com:okaabb/company-system-backend.git
