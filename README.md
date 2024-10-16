@@ -46,24 +46,31 @@ promoting efficiency and transparency across departments.
 **Project Setup**
 
 1. Clone the repository:
-   ``` git clone git@github.com:okaabb/company-system.git```
+   ```git clone --recurse-submodules git@github.com:okaabb/company-system.git```
 
 **Backend Setup**
 
 1. Navigate to the backend directory:
-   ```cd backend```
+   ```cd company-system-backend```
 2. Install dependencies:
    ```mvn install```
+    - After running ```mvn install```, right-click on the ```pom.xml``` file in your IDE (such as IntelliJ IDEA or
+      Eclipse).
+      Select ```Maven``` and then choose ```Reload Project```. This ensures that all dependencies are properly
+      recognized and configured.
 3. Configure your database connection in `src/main/resources/application.properties`
 4. Run the application:
    ```mvn spring-boot:run```
-5. The database schema and tables will be automatically created using Liquibase migration scripts upon running the backend application.
-
+5. Make sure you have a schema with name my_database on a database on port 3306
+   or specify your port and schema name in database url
+   in ```company-system-backend/src/main/resources/application.properties```
+6. The tables will be automatically created and filled using Liquibase migration scripts upon running the backend
+   application.
 
 **Frontend Setup**
 
 1. Navigate to the frontend directory:
-   ```cd frontend```
+   ```cd company-system-frontend```
 2. Install dependencies:
    ```npm install```
 3. Start the Angular application:
